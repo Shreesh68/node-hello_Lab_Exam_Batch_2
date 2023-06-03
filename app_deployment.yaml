@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 17shreesh
+  labels:
+    app: shreesh
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shreesh
+  template:
+    metadata:
+      labels:
+        app: shreesh
+    spec:
+      containers:
+      - name: 17shreesh
+        image: shreesh/docimg:latest
+        ports:
+        - containerPort: 80
